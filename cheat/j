@@ -1,0 +1,11 @@
+#autojump
+
+#全局跳转
+j foo
+
+#跳到子目录
+jc child-dir
+
+#在资源管理器中打开
+jo dir
+
