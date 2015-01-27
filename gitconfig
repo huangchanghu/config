@@ -14,6 +14,5 @@
     smu = submodule update
     sma = submodule add
     co = checkout
-
 [color]
     ui = true
