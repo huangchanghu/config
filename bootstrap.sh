@@ -12,7 +12,7 @@ if [[ $? -ne 0 ]]; then
 fi
 
 vimVersion=`vim --version | grep IMproved | awk '{print $5}'`
-if [ ${vimVersion/./} -lt 74  ];then 
+if [[ ${vimVersion/./} -lt 74  ]];then 
     echo "Your vim version is $vimVersion, version 7.4 or higher is recommended."
 fi
 
@@ -20,6 +20,7 @@ git submodule init
 git submodule update
 if [[ $? -ne 0 ]]; then
     echo "Failed to execute 'git submodule update'. Please check your network."
+    exit 1
 fi
 
 if [[ -f $HOME/.gitconfig ]]; then
