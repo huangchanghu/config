@@ -6,7 +6,7 @@ if [[ $? -ne 0 ]]; then
 fi
 
 which vim
-if [[ -ne 0 ]]; then
+if [[ $? -ne 0 ]]; then
     echo "vim is not installed"
     exit 1
 fi
@@ -24,24 +24,24 @@ fi
 
 if [[ -f $HOME/.gitconfig ]]; then
     mv $HOME/.gitconfig{,.bak}
-    ln -s $PWD/gitconfig $HOME/.gitconfig
 fi
+ln -s $PWD/gitconfig $HOME/.gitconfig
 
 if [[ -f $HOME/.vimrc ]]; then
     mv $HOME/.vimrc{,.bak}
-    ln -s $PWD/vimrc $HOME/.vimrc
 fi
+ln -s $PWD/vimrc $HOME/.vimrc
 
 if [[ -d $HOME/.vim ]]; then
     mv $HOME/.vim{,.bak}
-    mkdir -p $HOME/.vim/bundle
-    ln -s $PWD/vundle $HOME/.vim/bundle/vundle
 fi
+mkdir -p $HOME/.vim/bundle
+ln -s $PWD/vundle $HOME/.vim/bundle/vundle
 
 if [[ -f $HOME/.tmux.conf ]]; then
     mv $HOME/.tmux.conf{,.bak}
-    ln -s $PWD/tmux.conf $HOME/.tmux.conf
 fi
+ln -s $PWD/tmux.conf $HOME/.tmux.conf
 
 vim -c VundleInstall
 echo "Initialize configuration successfully!"
