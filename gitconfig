@@ -16,3 +16,6 @@
     co = checkout
 [color]
     ui = true
+[core]
+    #不对0x80以上的字符进行quote，解决git status/commit时中文文件名乱码
+    quotepath = false

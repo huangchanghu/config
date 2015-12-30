@@ -1,0 +1,2 @@
+find / -type d | less #列表/下的所有目录
+find / -type f | less #列表/下的所有文件

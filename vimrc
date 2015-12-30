@@ -71,6 +71,7 @@ Bundle 'vim-scripts/AutoComplPop'
 Bundle 'nvie/vim-flake8'
 Bundle 'vim-scripts/pythoncomplete'
 Bundle 'bling/vim-airline'
+Bundle 'mitsuhiko/vim-jinja'
 
 Bundle 'xvadim/open_plugin_page'
 map <Leader>gh <Plug>OpenPluginPage
@@ -85,3 +86,4 @@ Bundle 'suan/vim-instant-markdown'
 
 "ctrlp配置
 let g:ctrlp_custom_ignore = '\v[\/]target$'
+
