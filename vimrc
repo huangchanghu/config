@@ -37,7 +37,7 @@ filetype indent on
 "set wildmode=longest:full
 set completeopt+=longest "让vim的补全菜单行为与一般IDE一致
 " 离开插入模式后自动关闭预览窗口
-"autocmd InsertLeave * if pumvisible() == 0|pclose|endif 
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif 
 "回车即选中当前项
 inoremap <expr> <CR>    pumvisible() ? "\<C-y>" : "\<CR>"
 "上下左右键的行为
@@ -48,7 +48,7 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 let g:acp_completeoptPreview = 1 "AutoComplPop插件， 在补全处显示文档（预览）
 
 "change to current path
-autocmd BufEnter * lcd %:p:h
+"autocmd BufEnter * lcd %:p:h
 
 "python
 autocmd FileType python setlocal et sta sw=4 sts=4
@@ -70,6 +70,7 @@ Bundle 'vim-scripts/numbered.vim'
 Bundle 'vim-scripts/AutoComplPop'
 Bundle 'nvie/vim-flake8'
 Bundle 'vim-scripts/pythoncomplete'
+Bundle 'bling/vim-airline'
 
 Bundle 'xvadim/open_plugin_page'
 map <Leader>gh <Plug>OpenPluginPage
@@ -82,3 +83,5 @@ Bundle 'suan/vim-instant-markdown'
 "let g:instant_markdown_slow = 1
 "let g:instant_markdown_autostart = 0
 
+"ctrlp配置
+let g:ctrlp_custom_ignore = '\v[\/]target$'

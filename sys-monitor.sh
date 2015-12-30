@@ -79,3 +79,15 @@ GetDiskSpc()
     DiskSpace=`df -k |grep $Folder |awk '{print $5}' |awk -F% '{print $1}'`
     echo 已用: $DiskSpace%
 }
+
+sys-monitor-help() 
+{
+    echo "GetPID PsUser PsName"
+    echo "GetCpu PID"
+    echo "GetMem PID"
+    echo "GetDes PID"
+    echo "Listening port"
+    echo "Runnum PsName"
+    echo "GetSysCPU"
+    echo "GetDiskSpc mountpoint"
+}
