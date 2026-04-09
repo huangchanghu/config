@@ -19,3 +19,14 @@
 [core]
     #不对0x80以上的字符进行quote，解决git status/commit时中文文件名乱码
     quotepath = false
+    excludesfile = ~/.gitignore_global
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+[pager]
+    branch = false
+[pull]
+    rebase = fasle
+[credential]
+    helper = store --file ~/.netrc
