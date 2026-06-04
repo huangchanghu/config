@@ -27,6 +27,9 @@
 [pager]
     branch = false
 [pull]
-    rebase = fasle
+    rebase = false
 [credential]
     helper = store --file ~/.netrc
+
+[includeIf "gitdir:~/yy-workspace/"]
+    path = ~/.gitconfig-yy
